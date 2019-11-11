@@ -1,0 +1,6 @@
+.t-table,.t-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.t-table-all{border:1px solid #ccc}
+.t-bordered tr,.t-table-all tr{border-bottom:1px solid #ddd}.t-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.t-table-all tr:nth-child(odd){background-color:#fff}.t-table-all tr:nth-child(even){background-color:#f1f1f1}
+.t-hoverable tbody tr:hover,.t-ul.t-hoverable li:hover{background-color:#ccc}.t-centered tr th,.t-centered tr td{text-align:center}
+.t-table td,.t-table th,.t-table-all td,.t-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.t-table th:first-child,.t-table td:first-child,.t-table-all th:first-child,.t-table-all td:first-child{padding-left:16px}
