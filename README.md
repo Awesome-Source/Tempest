@@ -12,7 +12,7 @@ Examples
 --------
 
 A simple List widget may look like this:
-'''JavaScript
+```JavaScript
 class ListWidget implements IWidget{
 
     constructor(public Children: IWidget[]){}
@@ -31,10 +31,10 @@ class ListWidget implements IWidget{
     }
 
 }
-'''
+```
 
 This could be used like this:
-'''JavaScript
+```JavaScript
 var listContents: string[] = [];
         for(var i = 0; i < 5; i++){
             listContents.push(i.toString());
@@ -44,11 +44,11 @@ var listContents: string[] = [];
 		
 		var exampleTempest = new Tempest("example", list);
         exampleTempest.Render();
-'''
+```
 
 Tempest needs an existing node with the provided id as render target.
 
-'''HTML
+```HTML
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,4 +68,4 @@ Tempest needs an existing node with the provided id as render target.
 
 </body>
 </html>
-'''
+```
