@@ -11,6 +11,8 @@ Therefore only necessary updates are made to the real DOM.
 Examples
 --------
 
+For a more detailed example see https://github.com/Awesome-Source/Tempest-Example
+
 A simple List widget may look like this:
 ```JavaScript
 class ListWidget implements IWidget{
@@ -18,12 +20,12 @@ class ListWidget implements IWidget{
     constructor(public Children: IWidget[]){}
 
     Render(ctx: RenderContext): VNode {
-        var config = new VNode("ul");
+        const config = new VNode("ul");
         
         for(var i = 0; i < this.Children.length; i++){
             const currentChild = this.Children[i];
             const childConfig = new VNode("li")
-                .WithChildren([currentChild.Render(ctx)]);
+                .WithChild(currentChild.Render(ctx));
             config.ChildElements.push(childConfig);
         }        
 
@@ -36,14 +38,14 @@ class ListWidget implements IWidget{
 This could be used like this:
 ```JavaScript
 var listContents: string[] = [];
-        for(var i = 0; i < 5; i++){
-            listContents.push(i.toString());
-        }
+for(var i = 0; i < 5; i++){
+	listContents.push(i.toString());
+}
 
-        var list = new ListWidget(listContents.map(l => (new TextWidget(l))));
-		
-		var exampleTempest = new Tempest("example", list);
-        exampleTempest.Render();
+var list = new ListWidget(listContents.map(l => (new TextWidget(l))));
+
+var exampleTempest = new Tempest("example", list);
+exampleTempest.Render();
 ```
 
 Tempest needs an existing node with the provided id as render target.
